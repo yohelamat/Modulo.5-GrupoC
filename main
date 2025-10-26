@@ -1,1 +1,18 @@
+# Programa que utiliza listas, diccionarios y condicionales
 
+nombres = ["Yohel", "Demetrio", "Jonathan", "John", "Leonardo"]
+
+edades = {
+    "yohel": 29,
+    "demetrio": 31,
+    "jonathan": 27,
+    "john": 25,
+    "leonardo": 30
+}
+
+nombre = input("Ingresa un nombre: ").strip().lower()
+
+if nombre in edades:
+    print(f"{nombre.capitalize()} tiene {edades[nombre]} años.")
+else:
+    print(f"{nombre.capitalize()} no fue encontrado en la lista.")
