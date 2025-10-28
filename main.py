@@ -1,7 +1,7 @@
 # Programa que utiliza listas, diccionarios y condicionales
 
 from funciones import buscar_edad
-
+from validaciones import validar_nombre
 nombres = ["Yohel", "Demetrio", "Jonathan", "John", "Leonardo"]
 
 edades = {
@@ -13,7 +13,7 @@ edades = {
 }
 
 nombre = input("Ingresa un nombre: ").strip().lower()
-
+nombre = validar_nombre(nombre)
 # 👇 Se mantiene el if original
 if nombre in edades:
     print(f"{nombre.capitalize()} tiene {edades[nombre]} años.")
