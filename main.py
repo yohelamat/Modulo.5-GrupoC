@@ -14,13 +14,6 @@ edades = {
 
 nombre = input("Ingresa un nombre: ").strip().lower()
 
-# 👇 Se mantiene el if original
-if nombre in edades:
-    print(f"{nombre.capitalize()} tiene {edades[nombre]} años.")
-    # 👇 Además, llamamos a tu función como refuerzo
-    print(buscar_edad(nombre, edades))
-else:
-    print(f"{nombre.capitalize()} no fue encontrado en la lista.")
-    # 👇 También usamos tu función en el else
-    print(buscar_edad(nombre, edades))
+resultado = buscar_edad(nombres, edades)
 
+print(resultado)
