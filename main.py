@@ -3,17 +3,14 @@
 from funciones import buscar_edad
 
 nombres = ["Yohel", "Demetrio", "Jonathan", "John", "Leonardo"]
+edades = [29, 25, 27, 25, 30]
 
 edades = {
-    "yohel": 29,
-    "demetrio": 25,
-    "jonathan": 27,
-    "john": 25,
-    "leonardo": 30
+    nombre.lower(): edad for nombre, edad in zip(nombres, edades)
 }
 
-nombre = input("Ingresa un nombre: ").strip().lower()
+nombre_input = input("Ingresa un nombre: ")
 
-resultado = buscar_edad(nombres, edades)
+resultado = buscar_edad(nombre_input, edades)
 
 print(resultado)
